@@ -1,0 +1,181 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SKT-DEPLOY-.####",
+ "creation": "2026-03-06 10:29:46.078488",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "section_break_2ltp",
+  "amended_from",
+  "project_name",
+  "column_break_bmkj",
+  "deploy",
+  "is_deploy_dev",
+  "server_dev_check",
+  "deploy_dev_check",
+  "column_break_hpzf",
+  "deploy_production",
+  "is_deploy_production",
+  "section_break_jfkm",
+  "merged",
+  "section_break_rhig",
+  "scrum_master",
+  "scrum_master_reviem",
+  "column_break_knco",
+  "system_analyst",
+  "system_analyst_review",
+  "column_break_pvsm",
+  "pm",
+  "pm_review"
+ ],
+ "fields": [
+  {
+   "fieldname": "section_break_2ltp",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Deploy Note",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "label": "Project Name"
+  },
+  {
+   "fieldname": "column_break_bmkj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deploy",
+   "fieldtype": "Button",
+   "label": "Deploy Dev"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_deploy_dev",
+   "fieldtype": "Check",
+   "label": "Is Deploy Dev",
+   "read_only": 1
+  },
+  {
+   "fieldname": "server_dev_check",
+   "fieldtype": "Button",
+   "label": "Server Dev Check"
+  },
+  {
+   "fieldname": "deploy_dev_check",
+   "fieldtype": "HTML",
+   "label": "Deploy Dev Check"
+  },
+  {
+   "fieldname": "column_break_hpzf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deploy_production",
+   "fieldtype": "Button",
+   "label": "Deploy Production"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_deploy_production",
+   "fieldtype": "Check",
+   "label": "is Deploy Production",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_jfkm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "merged",
+   "fieldtype": "Table",
+   "label": "Merged",
+   "options": "Deploy Note Merge Request"
+  },
+  {
+   "depends_on": "eval:doc.is_deploy_dev==1",
+   "fieldname": "section_break_rhig",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "scrum_master",
+   "fieldtype": "Check",
+   "label": "Scrum Master"
+  },
+  {
+   "fieldname": "scrum_master_reviem",
+   "fieldtype": "Text",
+   "label": "Scrum Master Reviem"
+  },
+  {
+   "fieldname": "column_break_knco",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "system_analyst",
+   "fieldtype": "Check",
+   "label": "System Analyst"
+  },
+  {
+   "fieldname": "system_analyst_review",
+   "fieldtype": "Text",
+   "label": "System Analyst Review"
+  },
+  {
+   "fieldname": "column_break_pvsm",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "pm",
+   "fieldtype": "Check",
+   "label": "PM"
+  },
+  {
+   "fieldname": "pm_review",
+   "fieldtype": "Text",
+   "label": "PM Review"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-03-06 13:24:41.061591",
+ "modified_by": "Administrator",
+ "module": "Skt Deploy",
+ "name": "Deploy Note",
+ "naming_rule": "Expression",
+ "owner": "tanjungfikri1@gmail.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
