@@ -98,6 +98,13 @@ def skt_dev_webhook():
 
     project_name = payload.project.get("name")
     last_commit = payload.object_attributes.get("last_commit") 
+    action = payload.object_attributes.get("action")
+
+    if action != "merge":
+        return {
+            "success": True,
+            "message": "Action not merge"
+        }
 
     existing_name = doctype_check(project_name)
 
